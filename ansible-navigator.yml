@@ -1,0 +1,15 @@
+---
+# NAME: Ansible Navigator Settings
+#   https://ansible.readthedocs.io/projects/navigator/settings/
+
+ansible-navigator:
+  logging:
+    level: critical # debug, info, warning, error, critical
+    file: ./ansible-navigator.log
+  playbook-artifact:
+    enable: false
+  execution-environment:
+    enabled: true
+    image: quay.io/ansible/ansible-ee-windows:latest
+    container-engine: auto
+  mode: stdout # stdout, interactive, silent
