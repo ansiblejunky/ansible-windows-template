@@ -1,0 +1,15 @@
+---
+- name: Example windows automation playbook
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Get facts from windows hosts
+      ansible.windows.setup:
+        gather_timeout: 30
+      register: ansible_facts
+
+    - name: Get info for a single service
+      ansible.windows.win_service_info:
+        name: WinRM
+      register: service_info
