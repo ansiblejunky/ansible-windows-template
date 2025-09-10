@@ -1,6 +1,6 @@
 ---
 - name: Example windows automation playbook
-  hosts: all
+  hosts: windows
   gather_facts: false
 
   tasks:
